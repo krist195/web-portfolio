@@ -4,10 +4,10 @@ Kristians Mierins, группа px24
 
 Vietne: https://krist195.github.io/web-portfolio/
 
-- vizitkarte/manavizitkarte.html — визитка N1
-- profils/ — страница N2–N8, стили и картинки
-- index.html — главная для N10
-- melnraksti/ — черновики, в Git не попадают
+- vizitkarte/manavizitkarte.html: визитка N1
+- profils/: страница N2-N8, стили и картинки
+- index.html: главная для N10
+- melnraksti/: черновики, в Git не попадают
 
 ## N10
 
@@ -37,12 +37,12 @@ Vietne: https://krist195.github.io/web-portfolio/
 
 1. Git 2.54.0 (Apple Git-157), работаю в терминале zsh на macOS
 
-2. GitHub — krist195, Keep my email addresses private включено
+2. GitHub: krist195, Keep my email addresses private включено
    В Git использую noreply-почту
 
 3. Репозиторий web-portfolio, ветка main
    Имя и почту настроил только для этого проекта
-   Untracked files — новые файлы, которые Git ещё не отслеживает
+   Untracked files показывает новые файлы, которые Git ещё не отслеживает
 
 4. В .gitignore добавил Thumbs.db, desktop.ini и melnraksti/
    Создал черновик melnraksti/piezimes.txt: до .gitignore он был в git status, после пропал
@@ -53,9 +53,9 @@ Vietne: https://krist195.github.io/web-portfolio/
    Правки визитки, CSS и README сохранил отдельно
 
 6. В profils/style.css поменял цвет рамки с #315fa5 на #244a80 и сделал коммит
-   В git diff минус показывает старую строку, плюс — новую
+   В git diff старая строка с минусом, новая с плюсом
    Потом дописал ошибочную строку и убрал её через git restore profils/style.css
    restore вернул файл к последнему коммиту
 
-7. На GitHub и в git log по 11 коммитов, всё отправлено в main
+7. На GitHub и в git log по 12 коммитов, всё отправлено в main
    Репозиторий: https://github.com/krist195/web-portfolio
