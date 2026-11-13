@@ -2,7 +2,7 @@
 
 Vārds: Kristians Mierins
 
-Grupa: не указана
+Grupa: px24
 
 Vietne: https://krist195.github.io/web-portfolio/
 
@@ -73,7 +73,7 @@ Vietne: https://krist195.github.io/web-portfolio/
 
    Имя пользователя krist195
    В Git используется адрес 74619898+krist195@users.noreply.github.com
-   Галочка Keep my email addresses private пока отдельно не подтверждена
+   По подтверждению пользователя галочка Keep my email addresses private включена
 
 3. Репозиторий
 
@@ -109,5 +109,5 @@ Vietne: https://krist195.github.io/web-portfolio/
 
    Репозиторий: https://github.com/krist195/web-portfolio
    origin указывает на https://github.com/krist195/web-portfolio.git
-   После отправки этой версии README в GitHub и в git log по 9 коммитов
+   После отправки этой версии README в GitHub и в git log по 10 коммитов
    Ветка main отслеживает origin/main
