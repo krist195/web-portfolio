@@ -2,98 +2,14 @@
 <html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <!-- в мобильном режиме при ширине 390px без viewport innerWidth = 980,
-         с viewport = 390, без него страница выглядит как уменьшенная версия для компьютера -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mana profila lapa</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kristiana Mierina darbi</title>
 </head>
 <body>
-    <header>
-        <h1 id="galvenais-virsraksts" class="virsraksts">Kristians Mierins</h1>
-        <nav aria-label="Galvenā navigācija">
-            <ul>
-                <li><a href="#par-mani">Par mani</a></li>
-                <li><a href="#macibas">Mācības</a></li>
-                <li><a href="#galerija">Galerija</a></li>
-                <li><a href="#kontakti">Kontakti</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="par-mani">
-            <h2>Par mani</h2>
-            <article class="vizitkarte">
-                <img src="foto.jpg" alt="GitHub repozitorija zaru izvēlnes ekrānuzņēmums">
-                <div>
-                    <h3>Kristians Mierins</h3>
-                    <p class="izcelts">3. kursa programmēšanas students, 18 gadi</p>
-                    <p>Dzīvoju Rīgā.</p>
-                    <a class="poga" href="#kontakti">Sazināties</a>
-                </div>
-            </article>
-        </section>
-
-        <section id="macibas">
-            <h2>Mācības</h2>
-            <!-- таблица с заголовками и как минимум 3 строками данных -->
-            <table>
-                <caption>HTML un CSS mācību tēmas</caption>
-                <thead>
-                    <tr><th scope="col">Tēma</th><th scope="col">Piemērs lapā</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><strong>HTML</strong> semantika</td><td>Sadaļas un forma</td></tr>
-                    <tr><td>CSS box modelis</td><td>Kartīte ar apmali</td></tr>
-                    <tr><td><span>Flexbox</span></td><td><em>Vizītkarte</em></td></tr>
-                    <tr><td>CSS Grid</td><td>Galerija</td></tr>
-                </tbody>
-            </table>
-
-            <!-- отдельная карточка шириной 280px для расчёта box model,
-                 а в визитке на большом экране фото и текст остаются рядом -->
-            <article class="kartite">
-                <h3>Īsumā par mani</h3>
-                <p class="atstarpe-pirma">Mācos <span class="izcelts">programmēšanu</span>.</p>
-                <p class="atstarpe-otra">Dzīvoju Rīgā.</p>
-            </article>
-        </section>
-
-        <section id="galerija">
-            <h2>Galerija</h2>
-            <div class="galerija">
-                <img class="liela" src="galerija/1.jpg" alt="Kalni un mežs atspoguļojas mierīgā ezerā">
-                <img src="galerija/2.jpg" alt="Velosipēdists un tramvajs saulainā pilsētas ielā">
-                <img src="galerija/3.jpg" alt="Kafija tiek lieta stikla traukā uz galda ar kafijas pupiņām">
-                <img src="galerija/4.jpg" alt="Kalni un kluss ezers zem zilām debesīm">
-                <img src="galerija/5.jpg" alt="Telpaugi podos uz saules apspīdētas palodzes">
-                <img src="galerija/6.jpg" alt="Velosipēds atbalstīts pret saulainu, fakturētu sienu">
-                <img src="galerija/7.jpg" alt="Suns stāv zāles laukā siltā vakara saulē">
-                <img src="galerija/8.jpg" alt="Saulrieta zeltainā gaisma atspīd jūras viļņos">
-            </div>
-        </section>
-
-        <section id="kontakti">
-            <h2>Kontakti</h2>
-            <!-- здесь нужно только расположить поля формы, отправка не требуется -->
-            <form>
-                <label for="vards">Vārds</label>
-                <input type="text" id="vards" name="vards" required>
-
-                <label for="epasts">E-pasts</label>
-                <input type="email" id="epasts" name="epasts" required>
-
-                <label for="zina">Ziņa</label>
-                <textarea id="zina" name="zina" rows="4" required></textarea>
-
-                <button type="button">Nosūtīt</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 Kristians Mierins</p>
-    </footer>
+    <h1>Kristians Mierins</h1>
+    <ul>
+        <li><a href="vizitkarte/index.html">N1 vizītkarte</a></li>
+        <li><a href="profils/index.html">Profila lapa</a></li>
+    </ul>
 </body>
 </html>
