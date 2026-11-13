@@ -1,0 +1,401 @@
+/* все стили находятся в отдельном файле */
+* {
+    box-sizing: border-box;
+}
+
+/* шрифт и цвет наследуются от body, если у элемента нет своих правил
+   цвета записаны через HEX, rgb() и название white */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+}
+
+/* у заголовков другой шрифт, в конце списка стоит общая группа serif */
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* цвет h1 задан через тег, класс и id
+   побеждает #galvenais-virsraksts, потому что id имеет больший приоритет
+   специфичность id 1,0,0, класса 0,1,0, тега 0,0,1 */
+h1 {
+    margin: 0;
+    color: #664421;
+}
+
+.virsraksts {
+    color: #315fa5;
+}
+
+#galvenais-virsraksts {
+    color: #222;
+    font-size: 2.5rem;
+}
+
+/* у обоих правил h2 одинаковый приоритет
+   применяется второе, потому что оно написано ниже, цвет будет #222 */
+h2 {
+    color: #315fa5;
+}
+
+h2 {
+    color: #222;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+/* вариант с !important оставлен выключенным
+h1 { color: #664421 !important; }
+   с !important это правило перебивает обычное правило с id
+   если часто так делать, потом сложно разобраться, откуда берется стиль */
+p {
+    line-height: 1.6;
+}
+
+/* один класс используется у абзаца в визитке и у span в маленькой карточке */
+.izcelts {
+    background-color: #e8eef7;
+}
+
+/* имя слева, меню справа, по вертикали они стоят по центру
+   если места мало, flex-wrap переносит меню на следующую строку */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(221, 221, 221);
+}
+
+/* старый вариант из N5, теперь вместо него работает flex
+nav li {
+    display: inline-block;
+    margin-right: 12px;
+}
+   у inline-block пробелы и переносы строк между li давали лишние промежутки
+   во flex эти пробелы не влияют на расстояние, теперь его задает gap */
+nav ul {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+/* правило действует только на ссылки внутри nav
+   у inline-block вертикальный padding учитывается в высоте строки
+   у обычного inline он может залезать на соседние строки */
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: white;
+    color: #244a80;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #315fa5;
+    color: white;
+}
+
+/* для сравнения вариантов можно временно задать меню ширину 500px
+nav ul { width: 500px; }
+   flex-start ставит ссылки в начало строки
+   center собирает их по центру
+   space-between оставляет свободное место между ссылками
+   space-around оставляет место вокруг каждой ссылки, у краев его вдвое меньше
+   без свободного места разница между этими вариантами не видна */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* у секций есть рамка, скругление и отступы внутри и снаружи */
+section {
+    margin-bottom: 30px;
+    padding: 16px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+/* с content-box ширина была бы 280 + 15 + 15 + 4 + 4 = 318px без margin
+   с border-box общая ширина 280px, на содержимое остается 280 - 30 - 8 = 242px
+   для этого примера отдельная карточка, чтобы не сужать flex-визитку */
+.kartite {
+    width: 280px;
+    padding: 15px;
+    border: 4px solid #315fa5;
+    box-sizing: border-box;
+    margin-top: 20px;
+    background-color: white;
+}
+
+/* вертикальные margin соседних блочных абзацев схлопываются
+   между ними получается 30px, а не 20 + 30 = 50px
+   это работает здесь, потому что родитель не flex и не grid */
+.atstarpe-pirma {
+    margin-bottom: 20px;
+}
+
+.atstarpe-otra {
+    margin-top: 30px;
+}
+
+/* block на этой странице: main, section, h2
+   inline на этой странице: span в таблице, strong, em
+   у обычного inline span ширина и высота не работают
+   после inline-block он занимает 200 на 40px и остается в строке */
+span.izcelts {
+    display: inline-block;
+    width: 200px;
+    height: 40px;
+}
+
+/* у inline картинки auto по бокам не центрирует ее, потому что она часть строки
+   у block картинки с заданной шириной свободное место делится между боковыми margin */
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* оба абзаца снова видны, правила для проверки оставлены в комментарии
+.atstarpe-pirma { display: none; }
+.atstarpe-otra { visibility: hidden; }
+   display:none убирает элемент вместе с его местом
+   visibility:hidden прячет элемент, но место под него остается */
+
+/* display      | новая строка | работают width и height | ширина без width
+   block        | да           | да                      | доступная ширина родителя
+   inline       | нет          | нет                     | по тексту, может разбиться на строки
+   inline-block | нет          | да                      | по содержимому в пределах свободного места
+   h2 по умолчанию block, поэтому фон занимает всю доступную ширину
+   с inline-block фон был бы только по ширине самого заголовка */
+
+/* картинка и текст стоят рядом, на узком экране переносятся
+   при row justify-content работает по горизонтали, align-items по вертикали
+   flex-start выравнивает верхние края
+   stretch растягивает элементы с автоматической высотой и может исказить картинку
+   здесь оставлен center */
+.vizitkarte {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #ccc;
+    background-color: white;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.vizitkarte img {
+    width: 160px;
+    height: auto;
+}
+
+/* первое 1 разрешает текстовому блоку расти, второе 1 разрешает сжиматься
+   220px это его начальная ширина
+   если картинка 160px, gap 20px и текст 220px не помещаются, текст переносится
+   при ширине 390px он стоит под картинкой даже без @media */
+.vizitkarte div {
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
+.poga, button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #315fa5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font: inherit;
+}
+
+/* старые правила формы из N5, теперь форма работает через flex
+form label { display: block; margin-top: 10px; }
+form input, form textarea { display: block; width: 100%; }
+form button { display: block; margin-top: 10px; }
+   column ставит поля друг под другом
+   stretch растягивает их до одной ширины даже без width
+   align-self у кнопки не дает ей растянуться вместе с полями */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+input, textarea {
+    min-width: 0;
+    padding: 8px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    font: inherit;
+    color: inherit;
+    background-color: white;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* поле почты отличается от имени через атрибут type, отдельный класс не нужен */
+input[type="email"] {
+    border: 2px solid #315fa5;
+    background-color: #e8eef7;
+}
+
+/* outline показывает выбранное поле, когда переходишь по форме клавишей Tab */
+input:focus, textarea:focus, button:focus-visible, a:focus-visible {
+    outline: 3px solid #244a80;
+    outline-offset: 3px;
+}
+
+form button {
+    align-self: flex-start;
+}
+
+/* у row главная ось горизонтальная, поперечная вертикальная
+   у column главная ось вертикальная, поперечная горизонтальная
+   justify-content работает по главной оси, align-items по поперечной
+   row-reverse меняет направление внутри строки, но не порядок самих строк
+   order:1 у картинки поставил бы ее после текста и при переносе
+   без flex:1 1 220px начальная ширина текста зависит от содержимого 
+   поэтому длинный текст может перейти под картинку даже на большом экране */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+th, td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e8eef7;
+}
+
+/* сначала колонки задавались через grid-template-columns:repeat(4,1fr)
+   строки появляются сами, когда элементы не помещаются в предыдущие
+   с 200px 200px 200px 200px получается 836px вместе с gap
+   поэтому на экране 390px появляется горизонтальная прокрутка
+   с 2fr 1fr 1fr 1fr первая колонка получает 2/5 свободного места
+   fr делит свободное место после вычета gap, поэтому колонки с 1fr могут сжиматься
+   в minmax 150px это минимальная ширина, 1fr делит оставшееся место
+   при ширине 1280px получается 4 колонки, при 600px 3, при 390px 2
+   если оставить две картинки, auto-fill сохраняет пустые колонки
+   auto-fit убирает пустые колонки и расширяет оставшиеся
+   для этого сравнения у большой картинки надо временно убрать span */
+.galerija {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+}
+
+/* aspect-ratio задает форму 4:3
+   без cover вертикальная картинка растягивается под эту форму
+   с cover пропорции сохраняются, но часть картинки обрезается
+   у вертикальной картинки в основном обрезаются верх и низ */
+.galerija img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* старое правило для большой картинки, теперь оно ниже внутри min-width:600px
+.galerija .liela {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    height: 100%;
+}
+   первая картинка занимает две колонки и две строки
+   остальные картинки заполняют свободные ячейки по порядку
+   во flex так объединить ячейки не получится
+   для меню, визитки и формы подходит flex, потому что элементы идут по одной оси
+   для галереи нужен grid, чтобы совпадали и колонки, и строки
+   у визитки на grid с колонками 160px 1fr текст сам не перейдет под картинку
+   для экрана 390px пришлось бы отдельно менять колонки */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(221, 221, 221);
+}
+
+/* раньше при ширине 320px большая картинка создавала вторую колонку
+   первая была 150px, а вторая 118px, поэтому сетка выглядела неровно
+   меню переносилось, а текст визитки уходил под картинку
+   max-width:100% не дает карточкам стать шире родителя
+   при экране 320px визитка и маленькая карточка имеют ширину 246px
+   при экране 1280px визитка 726px, маленькая карточка 280px */
+.vizitkarte, .kartite {
+    max-width: 100%;
+}
+
+/* 40px и 24px записаны как 2.5rem и 1.5rem
+   при стандартных 16px это те же размеры
+   если увеличить размер шрифта в браузере, rem вырастет вместе с ним
+   заголовки с фиксированными px останутся прежнего размера
+   8vw при ширине 1280px это 102.4px, при 320px это 25.6px
+   clamp задает минимум 1.75rem, желаемый размер 8vw и максимум 2.5rem
+   при стандартном шрифте границы получаются 28px и 40px
+   размер шрифта у корня не закреплен в px, чтобы работала настройка браузера */
+#galvenais-virsraksts {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+}
+
+/* max-width:600px включает эти правила на экранах до 600px включительно */
+@media (max-width: 600px) {
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+    }
+}
+
+/* min-width:600px включает эти правила начиная с 600px
+   ровно на 600px работают оба условия, они меняют разные элементы
+   основные стили галереи рассчитаны на маленький экран */
+@media (min-width: 600px) {
+    .galerija .liela {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        height: 100%;
+    }
+}
+
+/* на ширинах 320, 390, 768 и 1280px горизонтальной прокрутки нет
+   без @media                 | что помогает
+   шапка и визитка             | flex-wrap переносит элементы
+   форма                      | column и stretch выравнивают поля
+   колонки галереи              | auto-fit и minmax подбирают число колонок
+   картинки и карточки         | max-width:100% ограничивает ширину
+   с @media                        | зачем нужно отдельное правило
+   две колонки меню            | на телефоне меняется способ раскладки
+   большая картинка 2 на 2     | на узком экране не хватает места для двух колонок по 150px
+   @media не меняет специфичность, поэтому эти правила стоят в конце файла */

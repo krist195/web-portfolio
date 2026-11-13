@@ -1,0 +1,51 @@
+Galerijas fotogrāfiju avoti
+Fotogrāfijas no Pexels; licence: https://www.pexels.com/license/
+Lejupielādēts: 2026-10-30. Samazināts līdz 1000 px platumam, saglabājot malu attiecību.
+
+1.jpg
+Autors: Bri Schneiter
+Avots: https://www.pexels.com/photo/calm-body-of-lake-between-mountains-346529/
+Alt: Kalni un mežs atspoguļojas mierīgā ezerā
+Faila izmēri: 1000 x 667 px; 54552 baiti
+
+2.jpg
+Autors: A.
+Avots: https://www.pexels.com/photo/a-person-riding-a-bicycle-on-the-street-6768903/
+Alt: Velosipēdists un tramvajs saulainā pilsētas ielā
+Faila izmēri: 1000 x 667 px; 176634 baiti
+
+3.jpg
+Autors: Burst
+Avots: https://www.pexels.com/photo/beverage-breakfast-brewed-coffee-caffeine-374885/
+Alt: Kafija tiek lieta stikla traukā uz galda ar kafijas pupiņām
+Faila izmēri: 1000 x 667 px; 92314 baiti
+
+4.jpg
+Autors: cottonbro studio
+Avots: https://www.pexels.com/photo/lake-near-green-mountains-under-blue-sky-9873665/
+Alt: Kalni un kluss ezers zem zilām debesīm
+Faila izmēri: 1000 x 1500 px; 77730 baiti
+
+5.jpg
+Autors: Erik Mclean
+Avots: https://www.pexels.com/photo/green-potted-plants-near-a-window-10894356/
+Alt: Telpaugi podos uz saules apspīdētas palodzes
+Faila izmēri: 1000 x 667 px; 96717 baiti
+
+6.jpg
+Autors: Benni Fish
+Avots: https://www.pexels.com/photo/a-bicycle-leaning-against-the-wall-13300975/
+Alt: Velosipēds atbalstīts pret saulainu, fakturētu sienu
+Faila izmēri: 1000 x 750 px; 171506 baiti
+
+7.jpg
+Autors: Andreas Ebner
+Avots: https://www.pexels.com/photo/sunlight-over-dog-on-grass-16167220/
+Alt: Suns stāv zāles laukā siltā vakara saulē
+Faila izmēri: 1000 x 1500 px; 136294 baiti
+
+8.jpg
+Autors: Swapnil Sharma
+Avots: https://www.pexels.com/photo/sea-water-at-sunset-16825467/
+Alt: Saulrieta zeltainā gaisma atspīd jūras viļņos
+Faila izmēri: 1000 x 667 px; 155561 baiti
