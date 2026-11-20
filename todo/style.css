@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: #f2f2f2;
+}
+
+main {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.75rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ievades-rinda {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+input {
+    flex: 1 1 200px;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    font: inherit;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    color: white;
+    background-color: #315fa5;
+    cursor: pointer;
+}
+
+input, button {
+    min-height: 44px;
+}
+
+button:hover {
+    background-color: #244a80;
+}
+
+input:focus, button:focus-visible {
+    outline: 3px solid #244a80;
+    outline-offset: 3px;
+}
+
+#zina {
+    min-height: 1.5em;
+    color: #9c2727;
+}
+
+#saraksts {
+    padding: 0;
+    list-style: none;
+}
+
+#saraksts li {
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: white;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+}
+
+#saraksts button {
+    margin-left: 12px;
+}
+
+li.izdarits {
+    color: #666;
+    text-decoration: line-through;
+}

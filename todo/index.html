@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uzdevumu saraksts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Uzdevumu saraksts</h1>
+        <label for="jauns">Jauns uzdevums</label>
+        <div class="ievades-rinda">
+            <input type="text" id="jauns">
+            <button type="button" id="pievienot">Pievienot</button>
+        </div>
+        <p id="zina" role="status"></p>
+        <ul id="saraksts"></ul>
+    </main>
+    <!-- скрипт в конце body, чтобы элементы уже были созданы к моменту его запуска -->
+    <script src="script.js"></script>
+</body>
+</html>
