@@ -7,6 +7,7 @@ Vietne: https://krist195.github.io/web-portfolio/
 - vizitkarte/manavizitkarte.html: визитка N1
 - profils/: страница N2-N8, стили и картинки
 - index.html: главная для N10
+- todo/: список задач N11
 - melnraksti/: черновики, в Git не попадают
 
 ## N10
@@ -14,7 +15,7 @@ Vietne: https://krist195.github.io/web-portfolio/
 1. Сначала в GitHub и git log был 1 коммит, после первой правки стало по 2
 
 2. index.html нужен, чтобы главная открывалась просто по адресу сайта, без имени файла
-   С него идут две относительные ссылки на визитку и профиль
+   С него идут относительные ссылки на визитку, профиль и список задач
 
 3. Включил Pages из main и / (root), первая публикация заняла примерно минуту
    Адрес сайта указан в начале README
@@ -57,5 +58,5 @@ Vietne: https://krist195.github.io/web-portfolio/
    Потом дописал ошибочную строку и убрал её через git restore profils/style.css
    restore вернул файл к последнему коммиту
 
-7. На GitHub и в git log по 12 коммитов, всё отправлено в main
+7. На GitHub и в git log по 14 коммитов, всё отправлено в main
    Репозиторий: https://github.com/krist195/web-portfolio
